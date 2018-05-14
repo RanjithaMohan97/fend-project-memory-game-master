@@ -2,7 +2,8 @@
 
 ## Table of Contents
 
-Instructions
+* Instructions
+* How to play
 
 ## Instructions
 Memory Game is an interesting game for improving the memory power of persons.The game has 8 pairs of cards which will get shuffle everytime when the player plays.The player needs to match the shuffled cards with  the respective pairs.
