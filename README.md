@@ -15,7 +15,7 @@ For building up this game 3 main technologies are used.
  * Javascript 
 
 ## How to play
-Player needs to clone or download the project from [here](https://github.com/RanjithaMohan97/fend-project-memory-game-master) download 3 files in their systems *i.e index.html,app.cs and app.js*.open index,html file in browser and thats it,You can play with cards now :)!!!
+Player needs to clone or download the project from [here](https://github.com/RanjithaMohan97/fend-project-memory-game-master) download 3 files in their systems *i.e index.html,app.cs and app.js*. Open index.html file in browser and thats it,You can play with cards now :)!!!
 
 
 

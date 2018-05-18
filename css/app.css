@@ -1,4 +1,4 @@
-html {
+     html {
     box-sizing: border-box;
 }
 
@@ -39,7 +39,11 @@ h1 {
     .container
     {
         transform: scale(0.4);
-    
+
+    }
+    body
+    {
+        overflow:hidden;
     }
     h1
     {
@@ -56,6 +60,10 @@ h1 {
     .container
     {
          transform: scale(0.6);
+    }
+    body
+    {
+        overflow:hidden;
     }
     h1
     {
