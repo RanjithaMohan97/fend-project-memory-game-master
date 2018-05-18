@@ -34,34 +34,36 @@ h1 {
     font-weight: 300;
 }
 
-@media screen and (max-width: 400px) {
-   
-    .container{
-       transform: scale(0.4);
+@media screen and (max-width: 400px) 
+{
+    .container
+    {
+        transform: scale(0.4);
     
     }
     h1
     {
         font-size: 12vw;
     }
-    .score-panel {  
+    .score-panel
+    {  
+        font-size: 8vw;
+    }
 
-    font-size: 8vw;
 }
-
-}
-@media screen and (min-width: 401px) and (max-width: 750px){
+@media screen and (min-width: 401px) and (max-width: 750px)
+{
     .container
-     {
-    transform: scale(0.6);
+    {
+         transform: scale(0.6);
     }
     h1
     {
         font-size: 13vw;
     }
     .score-panel
-     {  
-    font-size: 3.5vw;
+    {  
+        font-size: 3.5vw;
     }
 }
 
