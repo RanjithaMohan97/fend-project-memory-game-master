@@ -34,7 +34,8 @@ h1 {
     font-weight: 300;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) 
+{
     body {
     width: 100%;
     max-height: 50%;
@@ -47,13 +48,14 @@ h1 {
     {
         font-size: 12vw;
     }
-    .score-panel {  
-
+    .score-panel
+    {  
     font-size: 8vw;
-}
+    }
 
 }
-@media screen and (min-width: 401px) and (max-width: 750px){
+@media screen and (min-width: 401px) and (max-width: 750px)
+{
     .container
      {
     transform: scale(0.6);
