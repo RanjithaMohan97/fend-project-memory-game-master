@@ -35,10 +35,7 @@ h1 {
 }
 
 @media screen and (max-width: 400px) {
-    body {
-    width: 100%;
-    max-height: 50%;
-    }
+   
     .container{
        transform: scale(0.4);
     
