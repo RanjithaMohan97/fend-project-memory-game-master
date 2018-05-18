@@ -10,28 +10,28 @@
  *   - add each card's HTML to the page
  */
 //declaring and initializing variables
-let j,x=0;
-var finaltime=0;
-var starrate=0;
-var cardopen=[];
-var matcho=[];
-var openedcards=[];
-var moves;
-var sec=0,min=0,hours=0,t;
-var stars=document.getElementsByClassName("fa-star");
-var panel=document.querySelector(".deck");
-var card=document.getElementsByClassName("card");
-var cards=[...card];
-var c=cards.length;
+let x=0;
+let finaltime=0;
+let starrate=0;
+let cardopen=[];
+let matcho=[];
+let moves;
+let sec=0,min=0,hours=0,t;
+let stars=document.getElementsByClassName("fa-star");
+let panel=document.querySelector(".deck");
+let card=document.getElementsByClassName("card");
+let cards=[...card];
+let c=cards.length;
 
 document.querySelector(".fa-repeat").addEventListener("click",function(){ location.reload();});
 
 //Shuffle function from http://stackoverflow.com/a/2450976
 //function  to shuffle cards
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    while (currentIndex !== 0) {
+function shuffle(array) 
+{
+    let currentIndex = array.length, temporaryValue, randomIndex;
+    while (currentIndex !== 0) 
+    {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
         temporaryValue = array[currentIndex];
@@ -44,7 +44,7 @@ function shuffle(array) {
 //Adding EventListeners for all cards
 function addlistener()
 {
- 	for(var i=0;i<c;i++)
+ 	for(let i=0;i<c;i++)
  	{
  		cards[i].addEventListener("click", match);
 
@@ -54,25 +54,24 @@ function addlistener()
 //function to turn back cards after few seconds
 function hidecards()
 {
-	for(var i=0;i<c;i++)
- 		{
-			cards[i].classList.remove("show","open","match");
+	for(let i=0;i<c;i++)
+ 	{
+		cards[i].classList.remove("show","open","match");
 			
-		}
+	}
 }
 function showcards()
 {
- 	for(var j=0;j<c;j++)
- 		{
- 			cards[j].classList.toggle("open");
- 			cards[j].classList.toggle("show");
+ 	for(let j=0;j<c;j++)
+ 	{
+ 		cards[j].classList.toggle("open");
+ 		cards[j].classList.toggle("show");
 
- 		}
+ 	}
  }
 
 function start()
 {
-	
 	moves=0;
 	document.querySelector(".moves").innerHTML=moves;
 	cleartime();
@@ -107,14 +106,13 @@ function timer()
         sec = 0;
         min++;
         if (min >= 60)
-         {
+        {
             min = 0;
             hours++;
         }
     }
     
     document.querySelector(".timer").textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (min ? (min > 9 ? min : "0" + min) : "00") + ":" + (sec > 9 ? sec : "0" + sec);
-
     timetaken();
 }
 function timetaken()
@@ -125,21 +123,21 @@ function timetaken()
 //to decide stars to display based on moves
 function displayStars()
 {
-		if(moves<18)
- 		{
- 			starrate=3;
- 			rating(2);
- 		}
- 		else if(moves>=18&&moves<26)
- 		{
- 			starrate=2;
- 			rating(1);
- 		}
- 		else
- 		{
- 			starrate=1;
- 			rating(0);	
- 		}
+	if(moves<18)
+ 	{
+ 		starrate=3;
+ 		rating(2);
+ 	}
+ 	else if(moves>=18&&moves<26)
+ 	{
+ 		starrate=2;
+ 		rating(1);
+ 	}
+ 	else
+ 	{
+ 		starrate=1;
+ 		rating(0);	
+ 	}
 }
 //To Display stars based on moves
 function rating(rates)
@@ -154,19 +152,18 @@ function rating(rates)
 function match()
 {		
 		
-var list=this.classList;
-console.log(list);
-if(list.length===3)//checking whether the card has already open
- {
+	let list=this.classList;
+	console.log(list);
+	if(list.length===3)//checking whether the card has already open
+ 	{
  		alert("card already opened");
- }
- else if(list.length===4)//checking whether the card has already matched
- {
- 	alert("you already matched this card");
- 	
- }
+ 	}
+ 	else if(list.length===4)//checking whether the card has already matched
+ 	{
+ 		alert("you already matched this card");
+ 	}
  				
-else		
+	else		
  	{
  		
  		++moves;
@@ -194,9 +191,9 @@ else
  				
  				matcho[0].classList.toggle("match");
  				matcho[1].classList.toggle("match");
- 				var matched=++x; 	                       	
+ 				++x; 	                       	
  				if(x===8)
- 				{	
+ 				{	stoptimer();
  					scoreboard();
  				}
  				
@@ -227,6 +224,10 @@ else
  		}
  	}
 }
+function stoptimer()
+{
+	clearTimeout(t);
+}
 function cleartime()//To start the timer from first
 {
 	sec=0;
@@ -238,7 +239,7 @@ function cleartime()//To start the timer from first
  {
  	
  	document.querySelector(".score").style.visibility = "visible";
- 	 finaltime=document.querySelector(".timer").textContent;
+ 	finaltime=document.querySelector(".timer").textContent;
  	document.querySelector("#totaltime").textContent="You Completed the Game in "+finaltime;
  	document.querySelector("#overallscore").textContent="Your Score is: "+starrate+"/3";
  	document.querySelector(".playagain").addEventListener("click",function(){ location.reload();});
