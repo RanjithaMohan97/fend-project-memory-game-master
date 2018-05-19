@@ -37,7 +37,8 @@ h1 {
 @media screen and (max-width: 400px) 
 {
     .container
-    {
+    { 
+        margin-top:-12em;
         transform: scale(0.4);
 
     }
@@ -59,6 +60,7 @@ h1 {
 {
     .container
     {
+         margin-top:-12em;
          transform: scale(0.6);
     }
     body
